@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Inteligente de Currículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gerador Inteligente de Currículo</h1>
+        <p>Gerador de currículo profissional com IA</p>
+    </header>
+
+    <main class="container">
+        <section class="formulario">
+            <h2>Preencha seus dados</h2>
+
+            <input type="text" id="nome" placeholder="Seu nome">
+            <label for="foto" class="upload-foto">
+    + Adicionar foto de perfil
+</label>
+
+<input type="file" id="foto" accept="image/*" hidden>
+            <input list="areas" id="cargo" placeholder="Área desejada. Ex: Desenvolvedor C">
+
+            <datalist id="areas">
+                <option value="Desenvolvedor Front-End">
+                <option value="Desenvolvedor Back-End">
+                <option value="Desenvolvedor Full Stack">
+                <option value="Programador C">
+                <option value="Programador Java">
+                <option value="Programador Python">
+                <option value="Desenvolvedor Web">
+                <option value="Desenvolvedor Mobile">
+                <option value="Analista de Sistemas">
+                <option value="Estudante de ADS">
+                <option value="Técnico em Informática">
+                <option value="Suporte Técnico">
+                <option value="Auxiliar de TI">
+                <option value="Designer Gráfico">
+                <option value="UI/UX Designer">
+                <option value="Editor de Vídeo">
+                <option value="Social Media">
+                <option value="Marketing Digital">
+                <option value="Gestor de Tráfego">
+                <option value="Vendedor">
+                <option value="Consultor de Vendas">
+                <option value="Atendente">
+                <option value="Operador de Caixa">
+                <option value="Auxiliar Administrativo">
+                <option value="Assistente Administrativo">
+                <option value="Recepcionista">
+                <option value="Secretário">
+                <option value="Estoquista">
+                <option value="Auxiliar de Estoque">
+                <option value="Repositor">
+                <option value="Conferente">
+                <option value="Eletricista">
+                <option value="Técnico em Elétrica">
+                <option value="Auxiliar de Eletricista">
+                <option value="Mecânico">
+                <option value="Auxiliar de Mecânico">
+                <option value="Técnico em Manutenção">
+                <option value="Professor">
+                <option value="Auxiliar de Professor">
+                <option value="Monitor Escolar">
+                <option value="Cuidador">
+                <option value="Garçom">
+                <option value="Barista">
+                <option value="Cozinheiro">
+                <option value="Auxiliar de Cozinha">
+                <option value="Motoboy">
+                <option value="Motorista">
+                <option value="Entregador">
+                <option value="Segurança">
+                <option value="Vigilante">
+                <option value="Auxiliar de Serviços Gerais">
+                <option value="Jovem Aprendiz">
+                <option value="Estagiário">
+            </datalist>
+
+            <input type="email" id="email" placeholder="Seu e-mail">
+            <input type="text" id="telefone" placeholder="Seu telefone">
+            <input type="text" id="cidade" placeholder="Sua cidade">
+
+            <textarea id="sobre" placeholder="Fale um pouco sobre você"></textarea>
+            <button onclick="melhorarTexto()">Melhorar texto com IA</button>
+
+            <textarea id="experiencia" placeholder="Experiências profissionais"></textarea>
+            <textarea id="habilidades" placeholder="Habilidades. Ex: C, HTML, CSS, JavaScript"></textarea>
+            <textarea id="cursos" placeholder="Cursos e formação"></textarea>
+
+            <button onclick="gerarCurriculo()">Gerar Currículo</button>
+            <button onclick="mudarTema()">Mudar Tema</button>
+            <button onclick="baixarPDF()">Baixar / Imprimir PDF</button>
+        </section>
+
+        <section class="preview" id="curriculo">
+            <h2>Seu currículo aparecerá aqui</h2>
+            <p>Preencha os campos ao lado e clique em gerar.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

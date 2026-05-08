@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    color: #111827;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+
+header p {
+    color: #cbd5e1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 25px;
+    padding: 35px;
+}
+
+.formulario,
+.preview {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.formulario h2,
+.preview h2 {
+    color: #111827;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    background: #f8fafc;
+    color: #111827;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.preview {
+    min-height: 700px;
+}
+
+.preview h1 {
+    color: #111827;
+    margin-bottom: 5px;
+    font-size: 34px;
+}
+
+.preview h3 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+.preview h2 {
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 6px;
+    margin-top: 25px;
+}
+
+.preview p {
+    line-height: 1.6;
+    color: #374151;
+}
+
+.info {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.light {
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc, #dbeafe);
+}
+
+.light header {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.light header h1 {
+    color: #111827;
+}
+
+.light header p {
+    color: #4b5563;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #curriculo,
+    #curriculo * {
+        visibility: visible;
+    }
+
+    #curriculo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+} 
+.topo-curriculo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-curriculo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+}
